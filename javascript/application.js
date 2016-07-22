@@ -13,7 +13,6 @@ $('#amount').change(function(){
 	     	$('#btnSend').removeAttr("disabled");
 	
      }
-     //sem ponto pode
 });
 
 
