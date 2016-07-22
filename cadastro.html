@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Cadastro de Mercadoria</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="/valemobi/javascript/application.js" type="text/javascript" charset="utf-8" async defer></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.js" type="text/javascript"></script> 
+        <style type="text/css" media="screen">
+            .has-error{
+                background-color: #f96363;
+            }
+            body{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h1>Cadastro de Produto</h1>
+            <form action="product.php" method="post" accept-charset="utf-8" id="form">
+                <fieldset class="form-group">
+                        <label>Nome da Mercadoria: * <input type="text" name="name" value="" class="form-control" required></label>
+                        <br>
+                        <small class="text-muted">Se você estiver procurando por algum produto: "Procuro por tal produto, com tais caracteristicas.."</small>
+                </fieldset>
+                <fieldset class="form-group">
+                        <label>Quantidade: *<input type="text" name="amount" id="amount" value="" class="form-control" required>
+<p id='pamount'></p>
+                        </label>
+                </fieldset>
+                <fieldset class="form-group">
+                        <label>Preço unitário: *<input type="text" name="price" id="price" value="" class="form-control"required>
+<p id='pprice'></p>
+                        </label>
+                </fieldset>
+                <fieldset class="form-group">
+                        <label>Descrição: <textarea class="form-control" name="description" rows="5" cols="25" maxlength="300"></textarea></label>
+                        </fieldset>
+                <fieldset class="form-group">
+                        <label>Tipo de negócio: *
+                                <select name="bussiness" class="form-control">
+                                    <option value="C">Compra</option>
+                                    <option value="V">Venda</option>	
+                                </select>
+                        </label>
+                </fieldset>
+                <fieldset class="form-group">
+                        <label>Tipo de produto: *
+                                <select name="product_type" class="form-control">
+                                        <option value="1">Eletrônico</option>
+                                        <option value="2">Automóvel</option>	
+                                        <option value="3">Brinquedo</option>
+                                </select>
+                        </label>
+                        <br>
+                </fieldset>
+
+                <fieldset>
+                        <input type="submit" name="submit" value="Enviar" id="btnSend" class="btn btn-primary">
+                        <input type="reset" name="clear" value="Limpar" class="btn btn-secondary">
+                </fieldset>
+            </form>
+        </div>
+        
+    </body>
+    
+</html>
