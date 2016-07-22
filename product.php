@@ -4,14 +4,14 @@
      */
 
     if($_POST == '' || $_POST == NULL){
-        return header('Location: /valemobi/create.html');
+        return header('Location: create.html');
     }
     
     
-    define('DB_SERVER', 'localhost');
-    define('DB_NAME', 'valemobi_db');
-    define('DB_USERNAME', 'root');
-    define('DB_PASSWORD', '');
+    define('DB_SERVER', 'mysql.hostinger.com.br');
+    define('DB_NAME', 'u271203417_dbvmp');
+    define('DB_USERNAME', 'u271203417_root');
+    define('DB_PASSWORD', '669933');
 
     $con = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
     
@@ -19,7 +19,7 @@
         echo 'No connection with database.<br>';
     }
 
-    if(!mysqli_select_db($con, 'valemobi_db')){
+    if(!mysqli_select_db($con, 'u271203417_dbvmp')){
         echo 'No database connection.<br>';
     }
     
@@ -108,7 +108,7 @@ if($product_type=='1'){
 
             <h2>Ações</h2>
             <fieldset class="form-group">
-                <form action="/valemobi/create.html" method="post" accept-charset="utf-8" style="margin-bottom: 5px; float: center;">
+                <form action="create.html" method="post" accept-charset="utf-8" style="margin-bottom: 5px; float: center;">
                     <input type="submit" value="Criar novo Produto" id="btnCreate" class="btn btn-primary"> 
                 </form>
 

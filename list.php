@@ -1,15 +1,15 @@
 <?php
-    define('DB_SERVER', 'localhost');
-    define('DB_NAME', 'valemobi_db');
-    define('DB_USERNAME', 'root');
-    define('DB_PASSWORD', '');
+    define('DB_SERVER', 'mysql.hostinger.com.br');
+    define('DB_NAME', 'u271203417_dbvmp');
+    define('DB_USERNAME', 'u271203417_root');
+    define('DB_PASSWORD', '669933');
     
     $con = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
     if(!$con){
         echo 'No connection with database.<br>';
     } 
 
-    if(!mysqli_select_db($con, 'valemobi_db')){
+    if(!mysqli_select_db($con, 'u271203417_dbvmp')){
         echo 'No database connection.<br>';
     }
     $query = sprintf("SELECT * FROM product ORDER BY product.cd_product ASC");
@@ -87,9 +87,9 @@
             
             <h2>Ações</h2>
             <fieldset class="form-group">
-                <form action="/valemobi/create.html" method="post" accept-charset="utf-8">
+                <form action="create.html" method="post" accept-charset="utf-8">
                     <input type="submit" value="Criar novo Produto" id="btnCreate" class="btn btn-primary"> 
-                    <input type="submit" value="Voltar" id="btnVoltar" onclick="history.go(-1)" class="btn btn-primary"> 
+                    <input type="submit" value="Voltar" id="btnVoltar" onclick="history.go(-1)" class="btn btn-secondary"> 
                 </form>
                 
                 
