@@ -87,7 +87,7 @@
             
             <h2>Ações</h2>
             <fieldset class="form-group">
-                <form action="/valemobi/" method="post" accept-charset="utf-8">
+                <form action="/valemobi/create.html" method="post" accept-charset="utf-8">
                     <input type="submit" value="Criar novo Produto" id="btnCreate" class="btn btn-primary"> 
                     <input type="submit" value="Voltar" id="btnVoltar" onclick="history.go(-1)" class="btn btn-primary"> 
                 </form>

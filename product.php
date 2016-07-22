@@ -4,7 +4,7 @@
      */
 
     if($_POST == '' || $_POST == NULL){
-        return header('Location: /valemobi/');
+        return header('Location: /valemobi/create.html');
     }
     
     
@@ -25,6 +25,7 @@
     
     $name = $_POST['name'];
     $price = $_POST['price'];
+    $price = str_replace(",", ".", $price);
     $amount = $_POST['amount'];
     $description = $_POST['description'];
     $bussiness = $_POST['bussiness'];
@@ -107,7 +108,7 @@ if($product_type=='1'){
 
             <h2>Ações</h2>
             <fieldset class="form-group">
-                <form action="/valemobi/cadastro.php" method="post" accept-charset="utf-8" style="margin-bottom: 5px; float: center;">
+                <form action="/valemobi/create.html" method="post" accept-charset="utf-8" style="margin-bottom: 5px; float: center;">
                     <input type="submit" value="Criar novo Produto" id="btnCreate" class="btn btn-primary"> 
                 </form>
 
